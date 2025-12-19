@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Performance Predictor</title>
+</head>
+<body>
+  <h2>Student Performance Prediction</h2>
+
+  <form action="/predict" method="post">
+    Attendance: <input type="number" name="attendance"><br><br>
+    Study Hours: <input type="number" name="study"><br><br>
+    Previous Marks: <input type="number" name="marks"><br><br>
+    Assignments: <input type="number" name="assign"><br><br>
+    Sleep Hours: <input type="number" name="sleep"><br><br>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if result %}
+    <h3>Result: {{ result }}</h3>
+  {% endif %}
+</body>
+</html>
